@@ -8,7 +8,7 @@ OpenPoseROSIO::OpenPoseROSIO(OpenPose &openPose): it_(nh_)
     std::string image_topic;
     std::string output_topic;
 
-    nh_.param("/openpose_ros_node/image_topic", image_topic, std::string("/camera/image_raw"));
+    nh_.param("/openpose_ros_node/image_topic", image_topic, std::string("/camera/rgb/image_rect_color_rotated"));
     nh_.param("/openpose_ros_node/output_topic", output_topic, std::string("/openpose_ros/human_list"));
     nh_.param("/openpose_ros_node/display_output", display_output_flag_, true);
     nh_.param("/openpose_ros_node/print_keypoints", print_keypoints_flag_, false);
