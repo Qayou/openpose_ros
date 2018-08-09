@@ -1,7 +1,7 @@
 <launch>
   <arg name="image_topic" default="/kinect2/qhd/image_color_rect" />
   <arg name="openpose_output_topic" default="/openpose_ros/human_list" />
-  <arg name="display_output" default="false" />
+  <arg name="display_output" default="true" />
 
   <!-- Start openpose_ros -->
   <node pkg="openpose_ros" type="openpose_ros_node" name="openpose_ros_node" output="screen">
@@ -14,6 +14,6 @@
     <param name="original_video_file_name"  value="original_video_output.avi" />
     <param name="openpose_video_file_name"  value="openpose_video_output.avi" />
     <param name="video_fps"                 value="10" />
+    <param name="image_transport"           value="compressed" />
   </node>
-
 </launch>
